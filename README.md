@@ -1,1 +1,1 @@
-# social-module
+# social-components
