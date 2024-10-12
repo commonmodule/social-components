@@ -1,1 +1,1 @@
-{"version":3,"file":"ChatMessageListItem.d.ts","sourceRoot":"","sources":["../../src/chat/ChatMessageListItem.ts"],"names":[],"mappings":""}
+{"version":3,"file":"ChatMessageListItem.d.ts","sourceRoot":"","sources":["../../src/chat/ChatMessageListItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,MAAM,oBAAoB,CAAC;AAEjD,OAAO,WAAW,MAAM,kBAAkB,CAAC;AAE3C,MAAM,CAAC,OAAO,OAAO,mBAAoB,SAAQ,OAAO;gBAC1C,OAAO,EAAE,WAAW;CAOjC"}

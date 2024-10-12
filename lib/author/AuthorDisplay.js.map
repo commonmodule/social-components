@@ -1,1 +1,1 @@
-{"version":3,"file":"AuthorDisplay.js","sourceRoot":"","sources":["../../src/author/AuthorDisplay.ts"],"names":[],"mappings":""}
+{"version":3,"file":"AuthorDisplay.js","sourceRoot":"","sources":["../../src/author/AuthorDisplay.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAG7C,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,OAAO;IAChD,YAAY,MAAc;QACxB,KAAK,CAAC,iBAAiB,CAAC,CAAC;IAC3B,CAAC;CACF"}

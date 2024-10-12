@@ -1,1 +1,1 @@
-{"version":3,"file":"ChatMessageForm.js","sourceRoot":"","sources":["../../src/chat/ChatMessageForm.ts"],"names":[],"mappings":""}
+{"version":3,"file":"ChatMessageForm.js","sourceRoot":"","sources":["../../src/chat/ChatMessageForm.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,OAAO;IAClD;QACE,KAAK,CAAC,wBAAwB,CAAC,CAAC;IAClC,CAAC;CACF"}
