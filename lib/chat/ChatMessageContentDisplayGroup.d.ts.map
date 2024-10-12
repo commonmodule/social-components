@@ -1,0 +1,1 @@
+{"version":3,"file":"ChatMessageContentDisplayGroup.d.ts","sourceRoot":"","sources":["../../src/chat/ChatMessageContentDisplayGroup.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAC7C,OAAO,WAAW,MAAM,kBAAkB,CAAC;AAG3C,MAAM,CAAC,OAAO,OAAO,8BAA+B,SAAQ,OAAO;gBACrD,QAAQ,EAAE,WAAW,EAAE;CAMpC"}

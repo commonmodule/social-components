@@ -1,0 +1,1 @@
+{"version":3,"file":"AuthorNameDisplay.js","sourceRoot":"","sources":["../../src/author/AuthorNameDisplay.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAG7C,MAAM,CAAC,OAAO,OAAO,iBAAkB,SAAQ,OAAO;IACpD,YAAY,MAAc;QACxB,KAAK,CAAC,uBAAuB,CAAC,CAAC;QAC/B,IAAI,CAAC,IAAI,GAAG,MAAM,CAAC,IAAI,CAAC;IAC1B,CAAC;CACF"}
