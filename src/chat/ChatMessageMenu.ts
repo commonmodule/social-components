@@ -3,6 +3,7 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
 } from "@common-module/app-components";
+import SocialCompConfig from "../SocialCompConfig.js";
 import ChatMessageManager from "./ChatMessageManager.js";
 
 export default class ChatMessageMenu extends DropdownMenu {
@@ -16,6 +17,7 @@ export default class ChatMessageMenu extends DropdownMenu {
     this.appendToMain(
       new DropdownMenuGroup(
         new DropdownMenuItem({
+          icon: SocialCompConfig.editMenuIcon.clone(),
           label: "Edit",
           onClick: () => {
             options.onEdit();
@@ -23,6 +25,7 @@ export default class ChatMessageMenu extends DropdownMenu {
           },
         }),
         new DropdownMenuItem({
+          icon: SocialCompConfig.deleteMenuIcon.clone(),
           label: "Delete",
           onClick: async () => {
             await this.deleteMessage();
