@@ -1,15 +1,14 @@
 import ChatMessageContentDisplay from "./ChatMessageContentDisplay.js";
 
+export interface MessageActions {
+  onEdit: (messageId: number, newContent: string) => Promise<void>;
+  onDelete: (messageId: number) => Promise<void>;
+}
+
 export default class ChatMessageManager {
   private contentDisplayMap: Map<number, ChatMessageContentDisplay> = new Map();
 
-  constructor(
-    public executeEdit: (
-      messageId: number,
-      newContent: string,
-    ) => Promise<void>,
-    public executeDelete: (messageId: number) => Promise<void>,
-  ) {}
+  constructor(public actions: MessageActions) {}
 
   public setContentDisplay(
     messageId: number,

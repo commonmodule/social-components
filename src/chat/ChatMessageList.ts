@@ -1,23 +1,19 @@
 import { DomNode } from "@common-module/app";
 import Author from "../author/Author.js";
 import ChatMessage from "./ChatMessage.js";
-import ChatMessageManager from "./ChatMessageManager.js";
 import ChatMessageGroup from "./ChatMessageGroup.js";
 import ChatMessageListItem from "./ChatMessageListItem.js";
+import ChatMessageManager, { MessageActions } from "./ChatMessageManager.js";
 
 export default class ChatMessageList extends DomNode {
   private messageManager: ChatMessageManager;
 
   public children: ChatMessageListItem[] = [];
 
-  constructor(
-    messageGroups: ChatMessageGroup[],
-    executeEdit: (messageId: number, newContent: string) => Promise<void>,
-    executeDelete: (messageId: number) => Promise<void>,
-  ) {
+  constructor(messageGroups: ChatMessageGroup[], actions: MessageActions) {
     super("ul.chat-message-list");
 
-    this.messageManager = new ChatMessageManager(executeEdit, executeDelete);
+    this.messageManager = new ChatMessageManager(actions);
 
     this.append(
       ...messageGroups.map((messageGroup) =>
