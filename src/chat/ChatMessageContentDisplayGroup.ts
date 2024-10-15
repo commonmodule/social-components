@@ -1,13 +1,13 @@
 import { DomNode } from "@common-module/app";
 import ChatMessage from "./ChatMessage.js";
 import ChatMessageContentDisplay from "./ChatMessageContentDisplay.js";
-import ChatMessageContentDisplayManager from "./ChatMessageContentDisplayManager.js";
+import ChatMessageManager from "./ChatMessageManager.js";
 
 export default class ChatMessageContentDisplayGroup extends DomNode {
   public children: ChatMessageContentDisplay[] = [];
 
   constructor(
-    private contentDisplayManager: ChatMessageContentDisplayManager,
+    private messageManager: ChatMessageManager,
     messages: ChatMessage[],
   ) {
     super(".chat-message-content-display-group");
@@ -23,6 +23,6 @@ export default class ChatMessageContentDisplayGroup extends DomNode {
         this.remove();
       }
     });
-    this.contentDisplayManager.setContentDisplay(message.id, contentDisplay);
+    this.messageManager.setContentDisplay(message.id, contentDisplay);
   }
 }

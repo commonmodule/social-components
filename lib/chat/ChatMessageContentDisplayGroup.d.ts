@@ -1,11 +1,11 @@
 import { DomNode } from "@common-module/app";
 import ChatMessage from "./ChatMessage.js";
 import ChatMessageContentDisplay from "./ChatMessageContentDisplay.js";
-import ChatMessageContentDisplayManager from "./ChatMessageContentDisplayManager.js";
+import ChatMessageManager from "./ChatMessageManager.js";
 export default class ChatMessageContentDisplayGroup extends DomNode {
-    private contentDisplayManager;
+    private messageManager;
     children: ChatMessageContentDisplay[];
-    constructor(contentDisplayManager: ChatMessageContentDisplayManager, messages: ChatMessage[]);
+    constructor(messageManager: ChatMessageManager, messages: ChatMessage[]);
     addMessage(message: ChatMessage): void;
 }
 //# sourceMappingURL=ChatMessageContentDisplayGroup.d.ts.map

@@ -3,14 +3,14 @@ import AuthorAvatarDisplay from "../author/AuthorAvatarDisplay.js";
 import AuthorNameDisplay from "../author/AuthorNameDisplay.js";
 import ChatMessage from "./ChatMessage.js";
 import ChatMessageContentDisplayGroup from "./ChatMessageContentDisplayGroup.js";
-import ChatMessageContentDisplayManager from "./ChatMessageContentDisplayManager.js";
+import ChatMessageManager from "./ChatMessageManager.js";
 import ChatMessageGroup from "./ChatMessageGroup.js";
 
 export default class ChatMessageListItem extends DomNode {
   private displayGroup: ChatMessageContentDisplayGroup;
 
   constructor(
-    contentDisplayManager: ChatMessageContentDisplayManager,
+    messageManager: ChatMessageManager,
     private messageGroup: ChatMessageGroup,
   ) {
     super("li.chat-message-list-item");
@@ -21,7 +21,7 @@ export default class ChatMessageListItem extends DomNode {
         "main",
         el(".author", new AuthorNameDisplay(messageGroup.author)),
         this.displayGroup = new ChatMessageContentDisplayGroup(
-          contentDisplayManager,
+          messageManager,
           messageGroup.messages,
         ),
       ),
