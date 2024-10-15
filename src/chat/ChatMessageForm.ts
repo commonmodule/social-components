@@ -1,5 +1,6 @@
-import { DomNode } from "@common-module/app";
-import { Button, Input } from "@common-module/app-components";
+import { DomNode, el } from "@common-module/app";
+import { Button, ButtonType, Input } from "@common-module/app-components";
+import SocialCompConfig from "../SocialCompConfig.js";
 
 export default class ChatMessageForm extends DomNode {
   constructor() {
@@ -8,9 +9,13 @@ export default class ChatMessageForm extends DomNode {
       new Input({
         placeholder: "Type a message...",
       }),
-      new Button({
-        title: "Send",
-      }),
+      el(
+        ".actions",
+        new Button({
+          type: ButtonType.Circle,
+          icon: SocialCompConfig.sendButtonIcon.clone(),
+        }),
+      ),
     );
   }
 }

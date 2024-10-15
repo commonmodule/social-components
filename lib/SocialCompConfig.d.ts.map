@@ -1,1 +1,1 @@
-{"version":3,"file":"SocialCompConfig.d.ts","sourceRoot":"","sources":["../src/SocialCompConfig.ts"],"names":[],"mappings":"AACA,OAAO,MAAM,MAAM,oBAAoB,CAAC;AAExC,cAAM,gBAAgB;IACb,YAAY,4DAA8B;IAC1C,cAAc,4DAA+B;IAE7C,cAAc,WAAY,MAAM,KAAG,IAAI,CAE5C;CACH;;AAED,wBAAsC"}
+{"version":3,"file":"SocialCompConfig.d.ts","sourceRoot":"","sources":["../src/SocialCompConfig.ts"],"names":[],"mappings":"AACA,OAAO,MAAM,MAAM,oBAAoB,CAAC;AAExC,cAAM,gBAAgB;IACb,YAAY,4DAA8B;IAC1C,cAAc,4DAA+B;IAC7C,cAAc,4DAA8B;IAE5C,cAAc,WAAY,MAAM,KAAG,IAAI,CAE5C;CACH;;AAED,wBAAsC"}
