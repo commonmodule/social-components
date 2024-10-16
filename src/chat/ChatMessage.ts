@@ -6,7 +6,8 @@ interface Reaction {
 
 export default interface ChatMessage {
   id: number;
-  content: string;
+  content?: string;
+  rich?: {};
   replyTo?: number;
   reactions: Reaction[];
   isEdited?: boolean;

@@ -37,7 +37,7 @@ export default class ChatMessageContentDisplay extends DomNode {
     this.addClass("editing");
 
     this.editForm = new ChatMessageEditForm(
-      this.message.content,
+      this.message.content ?? "",
       (newMessage) => {
         this.messageManager.actions.onEdit(this.message.id, newMessage);
         this.endEditMode();
