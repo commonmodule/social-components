@@ -7,6 +7,8 @@ import ChatMessageManager, { MessageActions } from "./ChatMessageManager.js";
 
 export default class ChatMessageList extends DomNode {
   private messageManager: ChatMessageManager;
+  private fontLoadingPromise: Promise<void>;
+  private isScrolling = false;
 
   public children: ChatMessageListItem[] = [];
 
@@ -20,6 +22,28 @@ export default class ChatMessageList extends DomNode {
         new ChatMessageListItem(this.messageManager, messageGroup)
       ),
     );
+
+    this.fontLoadingPromise = this.waitForFontsToLoad();
+
+    // Initial scroll to bottom
+    this.scrollToBottom();
+  }
+
+  private async waitForFontsToLoad(): Promise<void> {
+    if ("fonts" in document) {
+      try {
+        // Wait for all fonts to load
+        await document.fonts.ready;
+      } catch (error) {
+        console.error("Error loading fonts:", error);
+        // Fallback in case of error
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+      }
+    } else {
+      // Fallback for browsers that don't support document.fonts
+      console.warn("document.fonts not supported. Using fallback timeout.");
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    }
   }
 
   public addMessage(author: Author, message: ChatMessage) {
@@ -43,6 +67,9 @@ export default class ChatMessageList extends DomNode {
         );
       }
     }
+
+    // Scroll to bottom after adding a new message
+    this.scrollToBottom();
   }
 
   public editMessage(messageId: number, newContent: string) {
@@ -51,5 +78,29 @@ export default class ChatMessageList extends DomNode {
 
   public deleteMessage(messageId: number) {
     this.messageManager.deleteMessage(messageId);
+  }
+
+  private async scrollToBottom(): Promise<void> {
+    if (this.isScrolling) return;
+
+    this.isScrolling = true;
+
+    try {
+      // Immediate scroll
+      this.performScroll();
+
+      // Wait for fonts and scroll again
+      await this.fontLoadingPromise;
+      this.performScroll();
+    } finally {
+      this.isScrolling = false;
+    }
+  }
+
+  private performScroll(): void {
+    // Use requestAnimationFrame to ensure the DOM has updated before scrolling
+    requestAnimationFrame(() => {
+      this.htmlElement.scrollTop = this.htmlElement.scrollHeight;
+    });
   }
 }

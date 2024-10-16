@@ -4,8 +4,9 @@ import SocialCompConfig from "../SocialCompConfig.js";
 
 export default class ChatMessageForm extends DomNode {
   constructor() {
-    super("form.chat-message-form");
-    this.append(
+    super(".chat-message-form");
+    this.append(el(
+      "form",
       new Input({
         placeholder: "Type a message...",
       }),
@@ -16,6 +17,6 @@ export default class ChatMessageForm extends DomNode {
           icon: SocialCompConfig.sendButtonIcon.clone(),
         }),
       ),
-    );
+    ));
   }
 }
