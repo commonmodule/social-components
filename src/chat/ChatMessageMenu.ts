@@ -1,4 +1,5 @@
 import {
+  Confirm,
   DropdownMenu,
   DropdownMenuGroup,
   DropdownMenuItem,
@@ -7,12 +8,16 @@ import SocialCompConfig from "../SocialCompConfig.js";
 import ChatMessageManager from "./ChatMessageManager.js";
 
 export default class ChatMessageMenu extends DropdownMenu {
-  constructor(left: number, top: number, options: {
-    messageManager: ChatMessageManager;
-    author: string;
-    messageId: number;
-    onEdit: () => void;
-  }) {
+  constructor(
+    left: number,
+    top: number,
+    private options: {
+      messageManager: ChatMessageManager;
+      author: string;
+      messageId: number;
+      onEdit: () => void;
+    },
+  ) {
     super(".chat-message-menu", { left, top });
     this.appendToMain(
       new DropdownMenuGroup(
@@ -27,8 +32,8 @@ export default class ChatMessageMenu extends DropdownMenu {
         new DropdownMenuItem({
           icon: SocialCompConfig.deleteMenuIcon.clone(),
           label: "Delete",
-          onClick: async () => {
-            await this.deleteMessage();
+          onClick: () => {
+            this.deleteMessage();
             this.remove();
           },
         }),
@@ -37,6 +42,11 @@ export default class ChatMessageMenu extends DropdownMenu {
   }
 
   private async deleteMessage() {
-    //TODO:
+    await new Confirm({
+      title: "Delete Message",
+      message: "Are you sure you want to delete this message?",
+    }).waitForConfirmation();
+
+    await this.options.messageManager.actions.onDelete(this.options.messageId);
   }
 }

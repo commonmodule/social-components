@@ -2,15 +2,17 @@ import { DomNode, el } from "@common-module/app";
 import { Button, ButtonType, Input } from "@common-module/app-components";
 import SocialCompConfig from "../SocialCompConfig.js";
 
-export default class ChatMessageForm extends DomNode {
+export default class ChatMessageEditForm extends DomNode {
   private input: Input;
 
-  constructor(onSend: (message: string) => void) {
-    super(".chat-message-form");
+  constructor(originalMessage: string, onSave: (message: string) => void) {
+    super(".chat-message-edit-form");
+
     this.append(el(
       "form",
       this.input = new Input({
         placeholder: "Type a message...",
+        value: originalMessage,
       }),
       el(
         ".actions",
@@ -22,10 +24,12 @@ export default class ChatMessageForm extends DomNode {
       {
         onsubmit: (event: Event) => {
           event.preventDefault();
-          onSend(this.input.value);
-          this.input.value = "";
+          onSave(this.input.value);
+          this.remove();
         },
       },
     ));
+
+    this.on("visible", () => this.input.focus());
   }
 }

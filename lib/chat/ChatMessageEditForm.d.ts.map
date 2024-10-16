@@ -1,0 +1,1 @@
+{"version":3,"file":"ChatMessageEditForm.d.ts","sourceRoot":"","sources":["../../src/chat/ChatMessageEditForm.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,MAAM,oBAAoB,CAAC;AAIjD,MAAM,CAAC,OAAO,OAAO,mBAAoB,SAAQ,OAAO;IACtD,OAAO,CAAC,KAAK,CAAQ;gBAET,eAAe,EAAE,MAAM,EAAE,MAAM,EAAE,CAAC,OAAO,EAAE,MAAM,KAAK,IAAI;CA2BvE"}
