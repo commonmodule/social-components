@@ -1,8 +1,10 @@
+import { DomNode } from "@common-module/app";
 import Author from "./author/Author.js";
+type DomNodeConstructor = new () => DomNode;
 declare class SocialCompConfig {
-    editMenuIcon: import("@common-module/app").DomNode<HTMLSpanElement, {}>;
-    deleteMenuIcon: import("@common-module/app").DomNode<HTMLSpanElement, {}>;
-    sendButtonIcon: import("@common-module/app").DomNode<HTMLSpanElement, {}>;
+    EditMenuIcon: DomNodeConstructor;
+    DeleteMenuIcon: DomNodeConstructor;
+    SendMessageButtonIcon: DomNodeConstructor;
     showAuthorInfo: (author: Author) => void;
 }
 declare const _default: SocialCompConfig;

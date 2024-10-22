@@ -22,7 +22,7 @@ export default class ChatMessageMenu extends DropdownMenu {
     this.appendToMain(
       new DropdownMenuGroup(
         new DropdownMenuItem({
-          icon: SocialCompConfig.editMenuIcon.clone(),
+          icon: new SocialCompConfig.EditMenuIcon(),
           label: "Edit",
           onClick: () => {
             options.onEdit();
@@ -30,7 +30,7 @@ export default class ChatMessageMenu extends DropdownMenu {
           },
         }),
         new DropdownMenuItem({
-          icon: SocialCompConfig.deleteMenuIcon.clone(),
+          icon: new SocialCompConfig.DeleteMenuIcon(),
           label: "Delete",
           onClick: () => {
             this.deleteMessage();
