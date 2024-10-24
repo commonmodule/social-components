@@ -1,5 +1,11 @@
-import { DomNode, el } from "@common-module/app";
-import Author from "./author/Author.js";
+import { DomNode } from "@common-module/app";
+import User from "./user/User.js";
+
+class DefaultAvatar extends DomNode {
+  constructor(user: User) {
+    super(".avatar", "👤");
+  }
+}
 
 type DomNodeConstructor = new () => DomNode;
 
@@ -22,12 +28,26 @@ class DefaultSendMessageButtonIcon extends DomNode {
 }
 
 class SocialCompConfig {
+  public Avatar: typeof DefaultAvatar = DefaultAvatar;
+
   public EditMenuIcon: DomNodeConstructor = DefaultEditMenuIcon;
   public DeleteMenuIcon: DomNodeConstructor = DefaultDeleteMenuIcon;
   public SendMessageButtonIcon: DomNodeConstructor =
     DefaultSendMessageButtonIcon;
 
-  public showAuthorInfo = (author: Author): void => {
+  public login = (): void => {
+    throw new Error("Not implemented");
+  };
+
+  public showUserInfo = (user: User): void => {
+    throw new Error("Not implemented");
+  };
+
+  public fetchUser: (userId: string) => Promise<User> = async () => {
+    throw new Error("Not implemented");
+  };
+
+  public fetchBulkUsers: (userIds: string[]) => Promise<User[]> = async () => {
     throw new Error("Not implemented");
   };
 }

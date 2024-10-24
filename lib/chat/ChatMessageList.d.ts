@@ -1,5 +1,5 @@
 import { DomNode } from "@common-module/app";
-import Author from "../author/Author.js";
+import User from "../user/User.js";
 import ChatMessage from "./ChatMessage.js";
 import ChatMessageGroup from "./ChatMessageGroup.js";
 import ChatMessageListItem from "./ChatMessageListItem.js";
@@ -11,7 +11,7 @@ export default class ChatMessageList extends DomNode {
     children: ChatMessageListItem[];
     constructor(messageGroups: ChatMessageGroup[], actions: MessageActions);
     private waitForFontsToLoad;
-    addMessage(author: Author, message: ChatMessage): void;
+    addMessage(author: User, message: ChatMessage): void;
     editMessage(messageId: number, newContent: string): void;
     deleteMessage(messageId: number): void;
     private scrollToBottom;

@@ -1,0 +1,1 @@
+{"version":3,"file":"LoggedInUserAvatarButton.d.ts","sourceRoot":"","sources":["../../src/logged-in-user/LoggedInUserAvatarButton.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAK7C,OAAO,YAAY,MAAM,mBAAmB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,wBAAyB,SAAQ,OAAO;IAC/C,OAAO,CAAC,YAAY;gBAAZ,YAAY,EAAE,YAAY;YAYhC,MAAM;CAwBrB"}

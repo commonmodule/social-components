@@ -1,0 +1,1 @@
+{"version":3,"file":"LoginEventContainer.d.ts","sourceRoot":"","sources":["../../src/logged-in-user/LoginEventContainer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,mBAAmB,CAAC;AAEnD,MAAM,CAAC,OAAO,CAAC,QAAQ,OAAO,YAAa,SAAQ,cAAc,CAAC;IAChE,kBAAkB,EAAE,MAAM,IAAI,CAAC;CAChC,CAAC;IACA,QAAQ,KAAK,UAAU,IAAI,OAAO,CAAC;CACpC"}

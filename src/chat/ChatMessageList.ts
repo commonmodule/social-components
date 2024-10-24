@@ -1,5 +1,5 @@
 import { DomNode } from "@common-module/app";
-import Author from "../author/Author.js";
+import User from "../user/User.js";
 import ChatMessage from "./ChatMessage.js";
 import ChatMessageGroup from "./ChatMessageGroup.js";
 import ChatMessageListItem from "./ChatMessageListItem.js";
@@ -46,7 +46,7 @@ export default class ChatMessageList extends DomNode {
     }
   }
 
-  public addMessage(author: Author, message: ChatMessage) {
+  public addMessage(author: User, message: ChatMessage) {
     if (this.children.length === 0) {
       this.append(
         new ChatMessageListItem(
