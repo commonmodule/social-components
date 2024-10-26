@@ -5,10 +5,6 @@ class UserManager {
   private userCache = new Map<string, User>();
   private pendingRequests = new Map<string, Promise<User>>();
 
-  public addUser(user: User): void {
-    this.userCache.set(user.id, user);
-  }
-
   public async getUser(userId: string): Promise<User> {
     const cachedUser = this.userCache.get(userId);
     if (cachedUser) return cachedUser;

@@ -20,26 +20,33 @@ export default class LoggedInUserAvatarButton extends DomNode {
 
   private async render() {
     if (this.loginManager.isLoggedIn) {
-      const user = await UserManager.getUser(this.loginManager.loggedInUser!);
+      try {
+        const user = await UserManager.getUser(this.loginManager.loggedInUser!);
 
-      this.empty().append(
-        new Button({
-          type: ButtonType.Circle,
-          icon: new SocialCompConfig.Avatar(user),
-          onClick: (button, event) => {
-            event.stopPropagation();
-            new LoggedInUserAvatarMenu(this.loginManager, button);
-          },
-        }),
-      );
-    } else {
-      this.empty().append(
-        new Button({
-          type: ButtonType.Contained,
-          title: "Log in",
-          onClick: () => SocialCompConfig.login(),
-        }),
-      );
-    }
+        this.empty().append(
+          new Button({
+            type: ButtonType.Circle,
+            icon: new SocialCompConfig.Avatar(user),
+            onClick: (button, event) => {
+              event.stopPropagation();
+              new LoggedInUserAvatarMenu(this.loginManager, button);
+            },
+          }),
+        );
+      } catch (error) {
+        console.error(error);
+        this.renderLoginButton();
+      }
+    } else this.renderLoginButton();
+  }
+
+  private renderLoginButton() {
+    this.empty().append(
+      new Button({
+        type: ButtonType.Contained,
+        title: "Log in",
+        onClick: () => SocialCompConfig.login(),
+      }),
+    );
   }
 }

@@ -4,5 +4,6 @@ export default class LoggedInUserAvatarButton extends DomNode {
     private loginManager;
     constructor(loginManager: LoginManager);
     private render;
+    private renderLoginButton;
 }
 //# sourceMappingURL=LoggedInUserAvatarButton.d.ts.map
