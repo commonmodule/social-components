@@ -31,12 +31,7 @@ export default class LoggedInUserAvatarMenu extends DropdownMenu {
   }
 
   private async renderHeader() {
-    let user = await UserManager.getUser(this.loginManager.loggedInUser!);
-    if (!user) {
-      user = SocialCompConfig.createFallbackUser(
-        this.loginManager.loggedInUser!,
-      );
-    }
+    const user = await UserManager.getUser(this.loginManager.loggedInUser!);
 
     this.appendToHeader(
       el(

@@ -3,9 +3,9 @@ import User from "./User.js";
 
 class UserManager {
   private userCache = new Map<string, User>();
-  private pendingRequests = new Map<string, Promise<User | undefined>>();
+  private pendingRequests = new Map<string, Promise<User>>();
 
-  public async getUser(userId: string): Promise<User | undefined> {
+  public async getUser(userId: string): Promise<User> {
     const cachedUser = this.userCache.get(userId);
     if (cachedUser) return cachedUser;
 

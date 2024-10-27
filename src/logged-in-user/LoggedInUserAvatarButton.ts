@@ -21,12 +21,7 @@ export default class LoggedInUserAvatarButton extends DomNode {
   private async render() {
     if (this.loginManager.isLoggedIn) {
       try {
-        let user = await UserManager.getUser(this.loginManager.loggedInUser!);
-        if (!user) {
-          user = SocialCompConfig.createFallbackUser(
-            this.loginManager.loggedInUser!,
-          );
-        }
+        const user = await UserManager.getUser(this.loginManager.loggedInUser!);
 
         this.empty().append(
           new Button({
