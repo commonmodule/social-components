@@ -11,7 +11,8 @@ declare class SocialCompConfig {
     SendMessageButtonIcon: DomNodeConstructor;
     login: () => void;
     showUserInfo: (user: User) => void;
-    fetchUser: (userId: string) => Promise<User>;
+    createFallbackUser: (userId: string) => User;
+    fetchUser: (userId: string) => Promise<User | undefined>;
     fetchBulkUsers: (userIds: string[]) => Promise<User[]>;
 }
 declare const _default: SocialCompConfig;

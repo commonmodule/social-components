@@ -3,9 +3,9 @@ import User from "./User.js";
 
 class UserManager {
   private userCache = new Map<string, User>();
-  private pendingRequests = new Map<string, Promise<User>>();
+  private pendingRequests = new Map<string, Promise<User | undefined>>();
 
-  public async getUser(userId: string): Promise<User> {
+  public async getUser(userId: string): Promise<User | undefined> {
     const cachedUser = this.userCache.get(userId);
     if (cachedUser) return cachedUser;
 
@@ -17,7 +17,7 @@ class UserManager {
 
     try {
       const user = await request;
-      this.userCache.set(userId, user);
+      if (user) this.userCache.set(userId, user);
       return user;
     } finally {
       this.pendingRequests.delete(userId);

@@ -43,9 +43,14 @@ class SocialCompConfig {
     throw new Error("Not implemented");
   };
 
-  public fetchUser: (userId: string) => Promise<User> = async () => {
+  public createFallbackUser = (userId: string): User => {
     throw new Error("Not implemented");
-  };
+  }
+
+  public fetchUser: (userId: string) => Promise<User | undefined> =
+    async () => {
+      throw new Error("Not implemented");
+    };
 
   public fetchBulkUsers: (userIds: string[]) => Promise<User[]> = async () => {
     throw new Error("Not implemented");

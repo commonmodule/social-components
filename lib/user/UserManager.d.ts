@@ -2,7 +2,7 @@ import User from "./User.js";
 declare class UserManager {
     private userCache;
     private pendingRequests;
-    getUser(userId: string): Promise<User>;
+    getUser(userId: string): Promise<User | undefined>;
     getBulkUsers(userIds: string[]): Promise<Map<string, User>>;
 }
 declare const _default: UserManager;
