@@ -23,8 +23,11 @@ export default class LoggedInUserAvatarMenu extends DropdownMenu {
     this.appendToMain(
       new DropdownMenuGroup(
         new DropdownMenuItem({
-          label: "test",
-          onClick: () => console.log("test"),
+          label: "Log out",
+          onClick: () => {
+            this.loginManager.logout();
+            this.remove();
+          },
         }),
       ),
     );

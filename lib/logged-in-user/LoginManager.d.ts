@@ -4,5 +4,6 @@ export default abstract class LoginManager extends EventContainer<{
 }> {
     abstract get isLoggedIn(): boolean;
     abstract get loggedInUser(): string | undefined;
+    abstract logout(): void;
 }
 //# sourceMappingURL=LoginManager.d.ts.map
