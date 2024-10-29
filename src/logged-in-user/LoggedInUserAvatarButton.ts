@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode, el } from "@common-module/app";
 import { Button, ButtonType } from "@common-module/app-components";
 import SocialCompConfig from "../SocialCompConfig.js";
 import UserManager from "../user/UserManager.js";
@@ -6,7 +6,10 @@ import LoggedInUserAvatarMenu from "./LoggedInUserAvatarMenu.js";
 import LoginManager from "./LoginManager.js";
 
 export default class LoggedInUserAvatarButton extends DomNode {
-  constructor(private loginManager: LoginManager) {
+  constructor(
+    private loginManager: LoginManager,
+    private showName: boolean = false,
+  ) {
     super(".logged-in-user-avatar-button");
 
     this.render();
@@ -24,9 +27,9 @@ export default class LoggedInUserAvatarButton extends DomNode {
         const user = await UserManager.getUser(this.loginManager.loggedInUser!);
 
         this.empty().append(
-          new Button({
-            type: ButtonType.Circle,
+          new Button(".avatar", {
             icon: new SocialCompConfig.Avatar(user),
+            title: this.showName ? el("span.name", user.name) : undefined,
             onClick: (button, event) => {
               event.stopPropagation();
               new LoggedInUserAvatarMenu(this.loginManager, button);

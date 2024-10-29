@@ -3,6 +3,6 @@ import LoginManager from "./LoginManager.js";
 export default class LoggedInUserAvatarMenu extends DropdownMenu {
     private loginManager;
     constructor(loginManager: LoginManager, button: Button);
-    private renderHeader;
+    private render;
 }
 //# sourceMappingURL=LoggedInUserAvatarMenu.d.ts.map

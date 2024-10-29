@@ -18,22 +18,10 @@ export default class LoggedInUserAvatarMenu extends DropdownMenu {
       top: rect.bottom + 10,
     });
 
-    this.renderHeader();
-
-    this.appendToMain(
-      new DropdownMenuGroup(
-        new DropdownMenuItem({
-          label: "Log out",
-          onClick: () => {
-            this.loginManager.logout();
-            this.remove();
-          },
-        }),
-      ),
-    );
+    this.render();
   }
 
-  private async renderHeader() {
+  private async render() {
     const user = await UserManager.getUser(this.loginManager.loggedInUser!);
 
     this.appendToHeader(
@@ -43,13 +31,27 @@ export default class LoggedInUserAvatarMenu extends DropdownMenu {
         el(
           ".user-details",
           el(".name", user.name),
-          el(".username", user.username),
+          user.username ? el(".username", user.username) : undefined,
         ),
         {
           onclick: () => {
             this.remove();
           },
         },
+      ),
+    );
+
+    this.appendToMain(
+      await SocialCompConfig.getLoggedInUserMenu(this, user),
+      new DropdownMenuGroup(
+        new DropdownMenuItem({
+          icon: new SocialCompConfig.LogoutIcon(),
+          label: "Log out",
+          onClick: () => {
+            this.loginManager.logout();
+            this.remove();
+          },
+        }),
       ),
     );
   }

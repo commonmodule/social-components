@@ -1,4 +1,6 @@
 import { DomNode } from "@common-module/app";
+import { DropdownMenuGroup } from "@common-module/app-components";
+import LoggedInUserAvatarMenu from "./logged-in-user/LoggedInUserAvatarMenu.js";
 import User from "./user/User.js";
 
 class DefaultAvatar extends DomNode {
@@ -27,9 +29,15 @@ class DefaultSendMessageButtonIcon extends DomNode {
   }
 }
 
+class DefaultLogoutIcon extends DomNode {
+  constructor() {
+    super("span.icon.logout", "🚪");
+  }
+}
+
 class SocialCompConfig {
   public Avatar: typeof DefaultAvatar = DefaultAvatar;
-
+  public LogoutIcon: DomNodeConstructor = DefaultLogoutIcon;
   public EditMenuIcon: DomNodeConstructor = DefaultEditMenuIcon;
   public DeleteMenuIcon: DomNodeConstructor = DefaultDeleteMenuIcon;
   public SendMessageButtonIcon: DomNodeConstructor =
@@ -48,6 +56,13 @@ class SocialCompConfig {
   };
 
   public fetchBulkUsers: (userIds: string[]) => Promise<User[]> = async () => {
+    throw new Error("Not implemented");
+  };
+
+  public getLoggedInUserMenu = (
+    menu: LoggedInUserAvatarMenu,
+    user: User,
+  ): Promise<DropdownMenuGroup> => {
     throw new Error("Not implemented");
   };
 }

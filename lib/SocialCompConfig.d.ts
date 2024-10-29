@@ -1,4 +1,6 @@
 import { DomNode } from "@common-module/app";
+import { DropdownMenuGroup } from "@common-module/app-components";
+import LoggedInUserAvatarMenu from "./logged-in-user/LoggedInUserAvatarMenu.js";
 import User from "./user/User.js";
 declare class DefaultAvatar extends DomNode {
     constructor(user: User);
@@ -6,6 +8,7 @@ declare class DefaultAvatar extends DomNode {
 type DomNodeConstructor = new () => DomNode;
 declare class SocialCompConfig {
     Avatar: typeof DefaultAvatar;
+    LogoutIcon: DomNodeConstructor;
     EditMenuIcon: DomNodeConstructor;
     DeleteMenuIcon: DomNodeConstructor;
     SendMessageButtonIcon: DomNodeConstructor;
@@ -13,6 +16,7 @@ declare class SocialCompConfig {
     showUserInfo: (user: User) => void;
     fetchUser: (userId: string) => Promise<User>;
     fetchBulkUsers: (userIds: string[]) => Promise<User[]>;
+    getLoggedInUserMenu: (menu: LoggedInUserAvatarMenu, user: User) => Promise<DropdownMenuGroup>;
 }
 declare const _default: SocialCompConfig;
 export default _default;
