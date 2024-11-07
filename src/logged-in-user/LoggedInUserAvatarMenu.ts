@@ -35,6 +35,7 @@ export default class LoggedInUserAvatarMenu extends DropdownMenu {
         ),
         {
           onclick: () => {
+            SocialCompConfig.goLoggedInUserProfile();
             this.remove();
           },
         },
