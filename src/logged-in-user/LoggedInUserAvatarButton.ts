@@ -26,7 +26,7 @@ export default class LoggedInUserAvatarButton extends DomNode {
       try {
         const user = await UserManager.getUser(this.loginManager.loggedInUser!);
 
-        this.empty().append(
+        this.clear().append(
           new Button(".avatar", {
             icon: new SocialCompConfig.Avatar(user),
             title: this.showName ? el("span.name", user.name) : undefined,
@@ -44,7 +44,7 @@ export default class LoggedInUserAvatarButton extends DomNode {
   }
 
   private renderLoginButton() {
-    this.empty().append(
+    this.clear().append(
       new Button({
         type: ButtonType.Contained,
         title: "Log in",
