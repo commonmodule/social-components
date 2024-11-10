@@ -1,7 +1,11 @@
+import { EventContainer } from "@common-module/ts";
 import User from "./User.js";
-declare class UserManager {
+declare class UserManager extends EventContainer<{
+    userUpdated: (user: User) => void;
+}> {
     private userCache;
     private pendingRequests;
+    setUser(user: User): void;
     getUser(userId: string): Promise<User>;
     getBulkUsers(userIds: string[]): Promise<Map<string, User>>;
 }

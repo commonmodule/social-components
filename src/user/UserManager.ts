@@ -1,9 +1,17 @@
+import { EventContainer } from "@common-module/ts";
 import SocialCompConfig from "../SocialCompConfig.js";
 import User from "./User.js";
 
-class UserManager {
+class UserManager extends EventContainer<{
+  userUpdated: (user: User) => void;
+}> {
   private userCache = new Map<string, User>();
   private pendingRequests = new Map<string, Promise<User>>();
+
+  public setUser(user: User) {
+    this.userCache.set(user.id, user);
+    this.emit("userUpdated", user);
+  }
 
   public async getUser(userId: string): Promise<User> {
     const cachedUser = this.userCache.get(userId);
@@ -17,7 +25,7 @@ class UserManager {
 
     try {
       const user = await request;
-      if (user) this.userCache.set(userId, user);
+      if (user) this.setUser(user);
       return user;
     } finally {
       this.pendingRequests.delete(userId);
@@ -40,7 +48,7 @@ class UserManager {
     if (uncachedIds.length > 0) {
       const users = await SocialCompConfig.fetchBulkUsers(uncachedIds);
       users.forEach((user) => {
-        this.userCache.set(user.id, user);
+        this.setUser(user);
         result.set(user.id, user);
       });
     }

@@ -19,6 +19,19 @@ export default class LoggedInUserAvatarButton extends DomNode {
       "loginStatusChanged",
       () => this.render(),
     );
+
+    this.subscribe(
+      UserManager,
+      "userUpdated",
+      (user) => {
+        if (
+          this.loginManager.isLoggedIn &&
+          user.id === this.loginManager.loggedInUser
+        ) {
+          this.render();
+        }
+      },
+    );
   }
 
   private async render() {
