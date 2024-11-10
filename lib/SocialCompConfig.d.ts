@@ -16,7 +16,7 @@ declare class SocialCompConfig {
     showUserInfo: (user: User) => void;
     fetchUser: (userId: string) => Promise<User>;
     fetchBulkUsers: (userIds: string[]) => Promise<User[]>;
-    goLoggedInUserProfile: () => void;
+    goLoggedInUserProfile: (user: User) => void;
     getLoggedInUserMenu: (menu: LoggedInUserAvatarMenu, user: User) => Promise<DropdownMenuGroup>;
 }
 declare const _default: SocialCompConfig;

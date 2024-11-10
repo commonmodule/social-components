@@ -59,7 +59,7 @@ class SocialCompConfig {
     throw new Error("Not implemented");
   };
 
-  public goLoggedInUserProfile = (): void => {
+  public goLoggedInUserProfile = (user: User): void => {
     throw new Error("Not implemented");
   };
 
