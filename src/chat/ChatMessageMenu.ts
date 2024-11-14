@@ -1,5 +1,5 @@
 import {
-  Confirm,
+  ConfirmDialog,
   DropdownMenu,
   DropdownMenuGroup,
   DropdownMenuItem,
@@ -42,7 +42,7 @@ export default class ChatMessageMenu extends DropdownMenu {
   }
 
   private async deleteMessage() {
-    await new Confirm({
+    await new ConfirmDialog({
       title: "Delete Message",
       message: "Are you sure you want to delete this message?",
     }).waitForConfirmation();
