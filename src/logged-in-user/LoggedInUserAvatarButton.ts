@@ -25,8 +25,8 @@ export default class LoggedInUserAvatarButton extends DomNode {
       "userUpdated",
       (user) => {
         if (
-          this.loginManager.isLoggedIn &&
-          user.id === this.loginManager.loggedInUser
+          this.loginManager.isLoggedIn() &&
+          user.id === this.loginManager.getLoggedInUser()
         ) {
           this.render();
         }
@@ -35,9 +35,11 @@ export default class LoggedInUserAvatarButton extends DomNode {
   }
 
   private async render() {
-    if (this.loginManager.isLoggedIn) {
+    if (this.loginManager.isLoggedIn()) {
       try {
-        const user = await UserManager.getUser(this.loginManager.loggedInUser!);
+        const user = await UserManager.getUser(
+          this.loginManager.getLoggedInUser()!,
+        );
 
         this.clear().append(
           new Button(".avatar", {

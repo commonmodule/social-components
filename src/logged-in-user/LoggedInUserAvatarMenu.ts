@@ -22,7 +22,9 @@ export default class LoggedInUserAvatarMenu extends DropdownMenu {
   }
 
   private async render() {
-    const user = await UserManager.getUser(this.loginManager.loggedInUser!);
+    const user = await UserManager.getUser(
+      this.loginManager.getLoggedInUser()!,
+    );
 
     this.appendToHeader(
       el(
