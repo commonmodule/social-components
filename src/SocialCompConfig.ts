@@ -43,7 +43,7 @@ class SocialCompConfig {
   public SendMessageButtonIcon: DomNodeConstructor =
     DefaultSendMessageButtonIcon;
 
-  public login = (): void => {
+  public login = (): Promise<void> => {
     throw new Error("Not implemented");
   };
 

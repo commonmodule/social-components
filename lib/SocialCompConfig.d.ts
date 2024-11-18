@@ -12,7 +12,7 @@ declare class SocialCompConfig {
     EditMenuIcon: DomNodeConstructor;
     DeleteMenuIcon: DomNodeConstructor;
     SendMessageButtonIcon: DomNodeConstructor;
-    login: () => void;
+    login: () => Promise<void>;
     showUserInfo: (user: User) => void;
     fetchUser: (userId: string) => Promise<User>;
     fetchBulkUsers: (userIds: string[]) => Promise<User[]>;
