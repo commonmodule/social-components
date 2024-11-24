@@ -1,4 +1,4 @@
-import { EventContainer } from "@common-module/ts";
+import { EventContainer, ObjectUtils } from "@common-module/ts";
 import SocialCompConfig from "../SocialCompConfig.js";
 import User from "./User.js";
 
@@ -9,8 +9,12 @@ class UserManager extends EventContainer<{
   private pendingRequests = new Map<string, Promise<User>>();
 
   public setUser(user: User) {
-    this.userCache.set(user.id, user);
-    this.emit("userUpdated", user);
+    const cachedUser = this.userCache.get(user.id);
+
+    if (!ObjectUtils.isEqual(cachedUser, user)) {
+      this.userCache.set(user.id, user);
+      this.emit("userUpdated", user);
+    }
   }
 
   public async getUser(userId: string): Promise<User> {
