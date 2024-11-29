@@ -45,7 +45,7 @@ export default class LoggedInUserAvatarMenu extends DropdownMenu {
     );
 
     this.appendToMain(
-      await SocialCompConfig.getLoggedInUserMenu(this, user),
+      ...(await SocialCompConfig.getLoggedInUserMenu(this, user)),
       new DropdownMenuGroup(
         new DropdownMenuItem({
           icon: new SocialCompConfig.LogoutIcon(),
