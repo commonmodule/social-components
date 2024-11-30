@@ -1,6 +1,6 @@
 import { DomNode, el } from "@common-module/app";
-import AuthorAvatarDisplay from "../author/AuthorAvatarDisplay.js";
-import AuthorNameDisplay from "../author/AuthorNameDisplay.js";
+import UserAvatarDisplay from "../user/UserAvatarDisplay.js";
+import UserNameDisplay from "../user/UserNameDisplay.js";
 import ChatMessage from "./ChatMessage.js";
 import ChatMessageContentDisplayGroup from "./ChatMessageContentDisplayGroup.js";
 import ChatMessageGroup from "./ChatMessageGroup.js";
@@ -16,10 +16,10 @@ export default class ChatMessageListItem extends DomNode {
     super("li.chat-message-list-item");
 
     this.append(
-      el(".avatar", new AuthorAvatarDisplay(messageGroup.author)),
+      el(".avatar", new UserAvatarDisplay(messageGroup.author)),
       el(
         "main",
-        el(".author", new AuthorNameDisplay(messageGroup.author)),
+        el(".author", new UserNameDisplay(messageGroup.author)),
         this.displayGroup = new ChatMessageContentDisplayGroup(
           messageManager,
           messageGroup,

@@ -19,7 +19,7 @@ export default class ChatMessageEditForm extends DomNode {
         ".actions",
         this.submitButton = new Button({
           type: ButtonType.Circle,
-          icon: SocialCompConfig.sendButtonIcon.clone(),
+          icon: new SocialCompConfig.SendMessageButtonIcon(),
         }),
       ),
       {
