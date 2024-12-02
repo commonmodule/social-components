@@ -1,5 +1,9 @@
 import { DomNode, el } from "@common-module/app";
-import { Button, ButtonType } from "@common-module/app-components";
+import {
+  AppCompConfig,
+  Button,
+  ButtonType,
+} from "@common-module/app-components";
 import SocialCompConfig from "../SocialCompConfig.js";
 import UserManager from "../user/UserManager.js";
 import LoggedInUserAvatarMenu from "./LoggedInUserAvatarMenu.js";
@@ -37,6 +41,8 @@ export default class LoggedInUserAvatarButton extends DomNode {
   private async render() {
     if (this.loginManager.isLoggedIn()) {
       try {
+        this.clear().append(new AppCompConfig.LoadingSpinner());
+
         const user = await UserManager.getUser(
           this.loginManager.getLoggedInUser()!,
         );
