@@ -1,15 +1,20 @@
+interface Rich {
+}
 interface Reaction {
     emoji: string;
     count: number;
     recentUsers: string[];
+    hasReacted?: boolean;
 }
 export default interface ChatMessage {
     id: number;
-    content?: string;
-    rich?: {};
+    sender: string;
     replyTo?: number;
-    reactions: Reaction[];
+    content?: string;
+    rich?: Rich;
+    reactions?: Reaction[];
     isEdited?: boolean;
+    createdAt: string;
 }
 export {};
 //# sourceMappingURL=ChatMessage.d.ts.map

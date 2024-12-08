@@ -5,8 +5,13 @@ import ChatMessageListItem from "./ChatMessageListItem.js";
 export default class ChatMessageList extends DomNode {
   public children: ChatMessageListItem[] = [];
 
-  constructor(messages: ChatMessage[]) {
+  constructor(messages?: ChatMessage[]) {
     super("ul.chat-message-list");
+    if (messages) this.setMessages(messages);
+  }
+
+  public setMessages(messages: ChatMessage[]) {
+    this.clear();
     for (const message of messages) {
       this.addMessage(message);
     }

@@ -15,7 +15,7 @@ export default interface ChatMessage {
 
   content?: string;
   rich?: Rich;
-  reactions: Reaction[];
+  reactions?: Reaction[];
 
   isEdited?: boolean;
   createdAt: string;
