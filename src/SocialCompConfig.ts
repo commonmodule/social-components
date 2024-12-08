@@ -52,7 +52,7 @@ class SocialCompConfig {
     throw new Error("Not implemented");
   };
 
-  public fetchUser: (userId: string) => Promise<User> = async () => {
+  public fetchUser: (userId: string) => Promise<User> | User = async () => {
     throw new Error("Not implemented");
   };
 

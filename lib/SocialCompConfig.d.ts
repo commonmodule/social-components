@@ -14,7 +14,7 @@ declare class SocialCompConfig {
     SendMessageButtonIcon: DomNodeConstructor;
     login: () => Promise<void>;
     showUserInfo: (user: User) => void;
-    fetchUser: (userId: string) => Promise<User>;
+    fetchUser: (userId: string) => Promise<User> | User;
     fetchBulkUsers: (userIds: string[]) => Promise<User[]>;
     goLoggedInUserProfile: (user: User) => void;
     getLoggedInUserMenu: (menu: LoggedInUserAvatarMenu, user: User) => Promise<DropdownMenuGroup[]>;

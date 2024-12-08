@@ -4,7 +4,7 @@ import ChatContentList from "./ChatContentList.js";
 import ChatMessage from "./ChatMessage.js";
 
 export default class ChatMessageListItem extends DomNode {
-  private _messageIds: number[] = [];
+  private _messageIds: string[] = [];
   private _sender: string;
   private _lastCreatedAt: string;
 
@@ -54,11 +54,11 @@ export default class ChatMessageListItem extends DomNode {
     this.contentList.updateMessage(message);
   }
 
-  public removeMessage(messageId: number) {
+  public removeMessage(messageId: string) {
     this.contentList.removeMessage(messageId);
   }
 
-  public addChunk(messageId: number, chunk: string) {
+  public addChunk(messageId: string, chunk: string) {
     this.contentList.addChunk(messageId, chunk);
   }
 }

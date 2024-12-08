@@ -7,7 +7,7 @@ export default class ChatMessageList extends DomNode {
     setMessages(messages: ChatMessage[]): void;
     addMessage(message: ChatMessage): void;
     updateMessage(message: ChatMessage): void;
-    removeMessage(messageId: number): void;
-    addChunk(messageId: number, chunk: string): void;
+    removeMessage(messageId: string): void;
+    addChunk(messageId: string, chunk: string): void;
 }
 //# sourceMappingURL=ChatMessageList.d.ts.map

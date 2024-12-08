@@ -25,14 +25,20 @@ class UserManager extends EventContainer<{
     if (pendingRequest) return pendingRequest;
 
     const request = SocialCompConfig.fetchUser(userId);
-    this.pendingRequests.set(userId, request);
+    if (request instanceof Promise) {
+      this.pendingRequests.set(userId, request);
 
-    try {
-      const user = await request;
+      try {
+        const user = await request;
+        if (user) this.setUser(user);
+        return user;
+      } finally {
+        this.pendingRequests.delete(userId);
+      }
+    } else {
+      const user = request;
       if (user) this.setUser(user);
       return user;
-    } finally {
-      this.pendingRequests.delete(userId);
     }
   }
 

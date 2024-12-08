@@ -21,14 +21,14 @@ export default class ChatContentList extends DomNode {
     item?.updateMessage(message);
   }
 
-  public removeMessage(messageId: number) {
+  public removeMessage(messageId: string) {
     const item = this.children.find((item) =>
       item.getMessageId() === messageId
     );
     item?.remove();
   }
 
-  public addChunk(messageId: number, chunk: string) {
+  public addChunk(messageId: string, chunk: string) {
     const item = this.children.find((item) =>
       item.getMessageId() === messageId
     );

@@ -9,7 +9,7 @@ interface Reaction {
 }
 
 export default interface ChatMessage {
-  id: number;
+  id: string;
   sender: string;
   replyTo?: number;
 

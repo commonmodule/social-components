@@ -7,7 +7,7 @@ interface Reaction {
     hasReacted?: boolean;
 }
 export default interface ChatMessage {
-    id: number;
+    id: string;
     sender: string;
     replyTo?: number;
     content?: string;
