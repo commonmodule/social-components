@@ -6,7 +6,7 @@ export default class ChatMessageForm extends DomNode {
   private input: Input;
   private submitButton: Button;
 
-  constructor(onSend: (message: string) => void) {
+  constructor(onSend: (content: string) => void) {
     super(".chat-message-form");
     this.append(el(
       "form",
