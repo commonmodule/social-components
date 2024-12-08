@@ -37,6 +37,7 @@ class DefaultLogoutIcon extends DomNode {
 
 class SocialCompConfig {
   public Avatar: typeof DefaultAvatar = DefaultAvatar;
+
   public LogoutIcon: DomNodeConstructor = DefaultLogoutIcon;
   public EditMenuIcon: DomNodeConstructor = DefaultEditMenuIcon;
   public DeleteMenuIcon: DomNodeConstructor = DefaultDeleteMenuIcon;
