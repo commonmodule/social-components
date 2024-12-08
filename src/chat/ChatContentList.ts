@@ -14,9 +14,9 @@ export default class ChatContentList extends DomNode {
     this.append(new ChatContentListItem(message));
   }
 
-  public updateMessage(message: ChatMessage) {
+  public updateMessage(messageId: string, message: ChatMessage) {
     const item = this.children.find((item) =>
-      item.getMessageId() === message.id
+      item.getMessageId() === messageId
     );
     item?.updateMessage(message);
   }

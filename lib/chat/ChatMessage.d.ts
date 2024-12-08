@@ -15,6 +15,7 @@ export default interface ChatMessage {
     reactions?: Reaction[];
     isEdited?: boolean;
     createdAt: string;
+    isTemp?: boolean;
 }
 export {};
 //# sourceMappingURL=ChatMessage.d.ts.map

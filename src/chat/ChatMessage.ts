@@ -19,4 +19,6 @@ export default interface ChatMessage {
 
   isEdited?: boolean;
   createdAt: string;
+
+  isTemp?: boolean;
 }

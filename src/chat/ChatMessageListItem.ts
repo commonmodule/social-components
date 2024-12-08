@@ -1,4 +1,5 @@
 import { DomNode, el } from "@common-module/app";
+import { ArrayUtils } from "@common-module/ts";
 import UserManager from "../user/UserManager.js";
 import ChatContentList from "./ChatContentList.js";
 import ChatMessage from "./ChatMessage.js";
@@ -50,8 +51,11 @@ export default class ChatMessageListItem extends DomNode {
     this.contentList.addMessage(message);
   }
 
-  public updateMessage(message: ChatMessage) {
-    this.contentList.updateMessage(message);
+  public updateMessage(messageId: string, message: ChatMessage) {
+    ArrayUtils.pull(this._messageIds, messageId);
+    this._messageIds.push(message.id);
+
+    this.contentList.updateMessage(messageId, message);
   }
 
   public removeMessage(messageId: string) {

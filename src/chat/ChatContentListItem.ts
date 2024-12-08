@@ -5,7 +5,7 @@ export default class ChatContentListItem extends DomNode {
   private contentDisplay: DomNode;
 
   constructor(private message: ChatMessage) {
-    super("li.chat-content-list-item");
+    super(`li.chat-content-list-item${message.isTemp ? ".temp" : ""}`);
     this.append(
       this.contentDisplay = el("p.content", message.content),
     );
@@ -16,7 +16,10 @@ export default class ChatContentListItem extends DomNode {
   }
 
   public updateMessage(message: ChatMessage) {
+    this.message = message;
     this.contentDisplay.text = message.content;
+
+    message.isTemp ? this.addClass("temp") : this.removeClass("temp");
   }
 
   public addChunk(chunk: string) {

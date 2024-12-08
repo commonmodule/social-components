@@ -30,11 +30,11 @@ export default class ChatMessageList extends DomNode {
     }
   }
 
-  public updateMessage(message: ChatMessage) {
+  public updateMessage(messageId: string, message: ChatMessage) {
     const item = this.children.find((item) =>
-      item.getMessageIds().includes(message.id)
+      item.getMessageIds().includes(messageId)
     );
-    item?.updateMessage(message);
+    item?.updateMessage(messageId, message);
   }
 
   public removeMessage(messageId: string) {
