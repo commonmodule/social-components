@@ -67,7 +67,7 @@ class SocialCompConfig {
   public getLoggedInUserMenu = (
     menu: LoggedInUserAvatarMenu,
     user: User,
-  ): Promise<DropdownMenuGroup[]> => {
+  ): Promise<(DropdownMenuGroup | undefined)[]> => {
     throw new Error("Not implemented");
   };
 }
