@@ -11,7 +11,7 @@ export default class ChatMessageForm extends DomNode {
     this.append(el(
       "form",
       this.input = new Input({
-        multiline: true,
+        //multiline: true,
         placeholder: "Type a message...",
       }),
       el(

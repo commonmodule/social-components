@@ -1,5 +1,4 @@
 import { DomNode, el } from "@common-module/app";
-import { marked } from "marked";
 import ChatMessage from "./ChatMessage.js";
 
 export default class ChatContentListItem extends DomNode {
@@ -8,12 +7,14 @@ export default class ChatContentListItem extends DomNode {
   constructor(private message: ChatMessage) {
     super(`li.chat-content-list-item${message.isTemp ? ".temp" : ""}`);
     this.append(
-      this.contentDisplay = el(".content.markdown-body"),
+      //this.contentDisplay = el(".content.markdown-body"),
+      this.contentDisplay = el(".content"),
     );
     if (message.content) {
-      this.contentDisplay.htmlElement.innerHTML = marked(
+      /*this.contentDisplay.htmlElement.innerHTML = marked(
         message.content,
-      ) as string;
+      ) as string;*/
+      this.contentDisplay.text = message.content;
     }
   }
 

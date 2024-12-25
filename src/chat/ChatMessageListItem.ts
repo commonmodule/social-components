@@ -1,6 +1,8 @@
 import { DomNode, el } from "@common-module/app";
 import { ArrayUtils } from "@common-module/ts";
+import SocialCompConfig from "../SocialCompConfig.js";
 import UserManager from "../user/UserManager.js";
+import UserNameDisplay from "../user/UserNameDisplay.js";
 import ChatContentList from "./ChatContentList.js";
 import ChatMessage from "./ChatMessage.js";
 
@@ -29,7 +31,11 @@ export default class ChatMessageListItem extends DomNode {
 
   private async loadSenderInfo() {
     const senderInfo = await UserManager.getUser(this._sender);
-    this.senderDisplay.append(senderInfo.name);
+
+    const avatar = new SocialCompConfig.Avatar(senderInfo);
+    avatar.onDom("click", () => SocialCompConfig.showUserInfo(senderInfo));
+
+    this.senderDisplay.append(avatar, new UserNameDisplay(senderInfo));
   }
 
   public getMessageIds() {
