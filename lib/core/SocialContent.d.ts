@@ -7,7 +7,7 @@ export interface Reaction {
     hasReacted?: boolean;
 }
 export default interface SocialContent {
-    id: string;
+    id: number;
     author: string;
     content?: string;
     rich?: Rich;
