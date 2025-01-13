@@ -9,7 +9,7 @@ export interface Reaction {
 }
 
 export default interface SocialContent {
-  id: number;
+  id: string;
   author: string;
 
   content?: string;

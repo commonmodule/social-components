@@ -4,7 +4,7 @@ export default class ChatContentListItem extends DomNode {
     private message;
     private contentDisplay;
     constructor(message: ChatMessage);
-    getMessageId(): number;
+    getMessageId(): string;
     updateMessage(message: ChatMessage): void;
     addChunk(chunk: string): void;
 }
