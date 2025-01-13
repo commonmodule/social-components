@@ -20,7 +20,7 @@ export default class ChatMessageList extends DomNode {
   public addMessage(message: ChatMessage) {
     const lastItem = this.children[this.children.length - 1];
     if (
-      lastItem && lastItem.getSender() === message.sender &&
+      lastItem && lastItem.getSender() === message.author &&
       (new Date(message.createdAt).getTime() -
           new Date(lastItem.getLastCreatedAt()).getTime()) < 60000
     ) {
