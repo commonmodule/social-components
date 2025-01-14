@@ -1,0 +1,1 @@
+{"version":3,"file":"PostList.d.ts","sourceRoot":"","sources":["../../src/article/PostList.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAC7C,OAAO,OAAO,MAAM,cAAc,CAAC;AACnC,OAAO,YAAY,MAAM,mBAAmB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,QAAS,SAAQ,OAAO;IACpC,QAAQ,EAAE,YAAY,EAAE,CAAM;gBAEzB,GAAG,KAAK,EAAE,OAAO,EAAE;CAGhC"}

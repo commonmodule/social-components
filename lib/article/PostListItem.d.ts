@@ -1,7 +1,5 @@
 import { DomNode } from "@common-module/app";
-
 export default class PostListItem extends DomNode {
-  constructor() {
-    super(".post-list-item");
-  }
+    constructor();
 }
+//# sourceMappingURL=PostListItem.d.ts.map

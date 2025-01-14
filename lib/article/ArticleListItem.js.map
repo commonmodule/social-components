@@ -1,0 +1,1 @@
+{"version":3,"file":"ArticleListItem.js","sourceRoot":"","sources":["../../src/article/ArticleListItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,OAAO;IAClD;QACE,KAAK,CAAC,oBAAoB,CAAC,CAAC;IAC9B,CAAC;CACF"}

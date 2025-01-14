@@ -17,7 +17,7 @@ export default class ChatMessageForm extends DomNode {
       el(
         ".button-container",
         this.submitButton = new Button({
-          type: ButtonType.Circle,
+          type: ButtonType.Icon,
           icon: new SocialCompConfig.SendMessageButtonIcon(),
         }),
       ),

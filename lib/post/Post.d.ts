@@ -1,6 +1,5 @@
 import SocialContent from "../core/SocialContent.js";
 export default interface Post extends SocialContent {
-    title: string;
-    content: string;
+    replyTo?: number;
 }
 //# sourceMappingURL=Post.d.ts.map

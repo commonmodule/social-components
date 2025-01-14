@@ -1,13 +1,13 @@
 import { DomNode } from "@common-module/app";
 import { Input } from "@common-module/app-components";
-import Post from "./Post.js";
+import Article from "./Article.js";
 
-export default class PostForm extends DomNode {
+export default class ArticleForm extends DomNode {
   private titleInput: Input;
   private contentInput: Input;
 
-  constructor(existingPost?: Post) {
-    super(".post-form");
+  constructor(existingPost?: Article) {
+    super(".article-form");
 
     this.append(
       this.titleInput = new Input({

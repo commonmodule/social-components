@@ -1,0 +1,1 @@
+{"version":3,"file":"PostDisplay.d.ts","sourceRoot":"","sources":["../../src/article/PostDisplay.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAC7C,OAAO,OAAO,MAAM,cAAc,CAAC;AAEnC,MAAM,CAAC,OAAO,OAAO,WAAY,SAAQ,OAAO;gBAClC,IAAI,EAAE,OAAO;CAI1B"}
