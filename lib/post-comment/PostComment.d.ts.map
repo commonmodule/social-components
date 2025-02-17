@@ -1,0 +1,1 @@
+{"version":3,"file":"PostComment.d.ts","sourceRoot":"","sources":["../../src/post-comment/PostComment.ts"],"names":[],"mappings":"AAAA,OAAO,aAAa,MAAM,0BAA0B,CAAC;AAErD,MAAM,CAAC,OAAO,WAAW,WAAY,SAAQ,aAAa;IACxD,MAAM,EAAE,MAAM,CAAC;IACf,aAAa,CAAC,EAAE;QAAE,CAAC,WAAW,EAAE,MAAM,GAAG,MAAM,CAAA;KAAE,CAAC;CACnD"}

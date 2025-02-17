@@ -1,6 +1,3 @@
-export interface Rich {
-}
-
 export interface Reaction {
   emoji: string;
   count: number;
@@ -11,11 +8,8 @@ export interface Reaction {
 export default interface SocialContent {
   id: string;
   author: string;
-
-  content?: string;
-  rich?: Rich;
+  content: string;
   reactions?: Reaction[];
-
   createdAt: string;
   editedAt?: string;
 }
