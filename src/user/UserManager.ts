@@ -42,7 +42,7 @@ class UserManager extends EventContainer<{
     }
   }
 
-  async getBulkUsers(userIds: string[]): Promise<Map<string, User>> {
+  public async getBulkUsers(userIds: string[]): Promise<Map<string, User>> {
     const uniqueIds = [...new Set(userIds)];
     const result = new Map<string, User>();
 
