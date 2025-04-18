@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode } from "@commonmodule/app";
 import LoginManager from "./LoginManager.js";
 export default class LoggedInUserAvatarButton extends DomNode {
     private loginManager;

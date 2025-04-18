@@ -1,1 +1,0 @@
-{"version":3,"file":"UserAvatarDisplay.js","sourceRoot":"","sources":["../../src/user/UserAvatarDisplay.ts"],"names":[],"mappings":"AAAA,OAAO,gBAAgB,MAAM,wBAAwB,CAAC;AAGtD,MAAM,CAAC,OAAO,OAAO,iBAAkB,SAAQ,gBAAgB,CAAC,MAAM;IACpE,YAAY,IAAU;QACpB,KAAK,CAAC,IAAI,CAAC,CAAC;QACZ,IAAI,CAAC,KAAK,CAAC,OAAO,EAAE,GAAG,EAAE,CAAC,gBAAgB,CAAC,YAAY,CAAC,IAAI,CAAC,CAAC,CAAC;IACjE,CAAC;CACF"}

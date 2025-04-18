@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode } from "@commonmodule/app";
 import SocialCompConfig from "../SocialCompConfig.js";
 import User from "./User.js";
 

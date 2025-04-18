@@ -1,4 +1,4 @@
-import { EventContainer, ObjectUtils } from "@common-module/ts";
+import { EventContainer, ObjectUtils } from "@commonmodule/ts";
 import SocialCompConfig from "../SocialCompConfig.js";
 import User from "./User.js";
 

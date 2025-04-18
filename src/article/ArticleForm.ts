@@ -1,5 +1,5 @@
-import { DomNode } from "@common-module/app";
-import { Input } from "@common-module/app-components";
+import { DomNode } from "@commonmodule/app";
+import { Input } from "@commonmodule/app-components";
 import Article from "./Article.js";
 
 export default class ArticleForm extends DomNode {

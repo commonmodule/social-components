@@ -1,4 +1,4 @@
-import { EventContainer } from "@common-module/ts";
+import { EventContainer } from "@commonmodule/ts";
 export default abstract class LoginManager extends EventContainer<{
     loginStatusChanged: () => void;
 }> {

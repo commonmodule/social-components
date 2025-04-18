@@ -1,10 +1,10 @@
-import { el } from "@common-module/app";
+import { el } from "@commonmodule/app";
 import {
   Button,
   DropdownMenu,
   DropdownMenuGroup,
   DropdownMenuItem,
-} from "@common-module/app-components";
+} from "@commonmodule/app-components";
 import SocialCompConfig from "../SocialCompConfig.js";
 import UserManager from "../user/UserManager.js";
 import LoginManager from "./LoginManager.js";

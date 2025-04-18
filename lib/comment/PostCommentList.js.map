@@ -1,1 +1,0 @@
-{"version":3,"file":"PostCommentList.js","sourceRoot":"","sources":["../../src/comment/PostCommentList.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAI7C,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,OAAO;IAC3C,QAAQ,GAA0B,EAAE,CAAC;IAE5C,YAAY,GAAG,QAAmB;QAChC,KAAK,CAAC,oBAAoB,CAAC,CAAC;IAC9B,CAAC;CACF"}

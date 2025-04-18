@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode } from "@commonmodule/app";
 import Article from "./Article.js";
 import PostListItem from "./ArticleListItem.js";
 export default class ArticleList extends DomNode {

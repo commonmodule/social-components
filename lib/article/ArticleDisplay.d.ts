@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode } from "@commonmodule/app";
 import Article from "./Article.js";
 export default class ArticleDisplay extends DomNode {
     constructor(article: Article);

@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode } from "@commonmodule/app";
 import PostComment from "./PostComment.js";
 import PostCommentListItem from "./PostCommentListItem.js";
 export default class PostCommentList extends DomNode {

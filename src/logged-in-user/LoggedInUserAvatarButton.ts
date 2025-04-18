@@ -1,9 +1,9 @@
-import { DomNode, el } from "@common-module/app";
+import { DomNode, el } from "@commonmodule/app";
 import {
   AppCompConfig,
   Button,
   ButtonType,
-} from "@common-module/app-components";
+} from "@commonmodule/app-components";
 import SocialCompConfig from "../SocialCompConfig.js";
 import UserManager from "../user/UserManager.js";
 import LoggedInUserAvatarMenu from "./LoggedInUserAvatarMenu.js";

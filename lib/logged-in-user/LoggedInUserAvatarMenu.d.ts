@@ -1,4 +1,4 @@
-import { Button, DropdownMenu } from "@common-module/app-components";
+import { Button, DropdownMenu } from "@commonmodule/app-components";
 import LoginManager from "./LoginManager.js";
 export default class LoggedInUserAvatarMenu extends DropdownMenu {
     private loginManager;

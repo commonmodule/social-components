@@ -1,1 +1,0 @@
-{"version":3,"file":"CommentList.js","sourceRoot":"","sources":["../../src/post-comment/CommentList.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAI7C,MAAM,CAAC,OAAO,OAAO,WAAY,SAAQ,OAAO;IACvC,QAAQ,GAAsB,EAAE,CAAC;IAExC,YAAY,GAAG,QAAmB;QAChC,KAAK,CAAC,eAAe,CAAC,CAAC;IACzB,CAAC;CACF"}

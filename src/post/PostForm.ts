@@ -1,5 +1,5 @@
-import { DomNode } from "@common-module/app";
-import { RichTextEditor } from "@common-module/markdown-editor";
+import { DomNode } from "@commonmodule/app";
+import { RichTextEditor } from "@commonmodule/markdown-editor";
 
 export default class PostForm extends DomNode {
   constructor() {

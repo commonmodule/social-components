@@ -1,4 +1,4 @@
-import { EventContainer } from "@common-module/ts";
+import { EventContainer } from "@commonmodule/ts";
 import User from "./User.js";
 declare class UserManager extends EventContainer<{
     userUpdated: (user: User) => void;

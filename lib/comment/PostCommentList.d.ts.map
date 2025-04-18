@@ -1,1 +1,0 @@
-{"version":3,"file":"PostCommentList.d.ts","sourceRoot":"","sources":["../../src/comment/PostCommentList.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAC7C,OAAO,OAAO,MAAM,cAAc,CAAC;AACnC,OAAO,mBAAmB,MAAM,0BAA0B,CAAC;AAE3D,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,OAAO;IAC3C,QAAQ,EAAE,mBAAmB,EAAE,CAAM;gBAEhC,GAAG,QAAQ,EAAE,OAAO,EAAE;CAGnC"}

@@ -1,5 +1,5 @@
-import { DomNode } from "@common-module/app";
-import { DropdownMenuGroup } from "@common-module/app-components";
+import { DomNode } from "@commonmodule/app";
+import { DropdownMenuGroup } from "@commonmodule/app-components";
 import LoggedInUserAvatarMenu from "./logged-in-user/LoggedInUserAvatarMenu.js";
 import User from "./user/User.js";
 
