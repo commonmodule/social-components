@@ -1,6 +1,6 @@
-import { DomNode } from "@commonmodule/app";
+import { Dom } from "@commonmodule/app";
 import ChatMessage from "./ChatMessage.js";
-export default class ChatContentListItem extends DomNode {
+export default class ChatContentListItem extends Dom {
     private message;
     private contentDisplay;
     constructor(message: ChatMessage);

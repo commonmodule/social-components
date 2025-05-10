@@ -1,8 +1,8 @@
-import { DomNode, el } from "@commonmodule/app";
+import { Dom, el } from "@commonmodule/app";
 import ChatMessage from "./ChatMessage.js";
 
-export default class ChatContentListItem extends DomNode {
-  private contentDisplay: DomNode;
+export default class ChatContentListItem extends Dom {
+  private contentDisplay: Dom;
 
   constructor(private message: ChatMessage) {
     super(`li.chat-content-list-item${message.isTemp ? ".temp" : ""}`);

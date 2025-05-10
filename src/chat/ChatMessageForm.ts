@@ -1,8 +1,8 @@
-import { DomNode, el } from "@commonmodule/app";
+import { Dom, el } from "@commonmodule/app";
 import { Button, ButtonType, Input } from "@commonmodule/app-components";
 import SocialCompConfig from "../SocialCompConfig.js";
 
-export default class ChatMessageForm extends DomNode {
+export default class ChatMessageForm extends Dom {
   private input: Input;
   private submitButton: Button;
 

@@ -1,35 +1,35 @@
-import { DomNode } from "@commonmodule/app";
+import { Dom } from "@commonmodule/app";
 import { DropdownMenuGroup } from "@commonmodule/app-components";
 import LoggedInUserAvatarMenu from "./logged-in-user/LoggedInUserAvatarMenu.js";
 import User from "./user/User.js";
 
-class DefaultAvatar extends DomNode {
+class DefaultAvatar extends Dom {
   constructor(user: User) {
     super(".avatar", "👤");
   }
 }
 
-type DomNodeConstructor = new () => DomNode;
+type DomConstructor = new () => Dom;
 
-class DefaultEditMenuIcon extends DomNode {
+class DefaultEditMenuIcon extends Dom {
   constructor() {
     super("span.icon.edit", "✏️");
   }
 }
 
-class DefaultDeleteMenuIcon extends DomNode {
+class DefaultDeleteMenuIcon extends Dom {
   constructor() {
     super("span.icon.delete", "❌");
   }
 }
 
-class DefaultSendMessageButtonIcon extends DomNode {
+class DefaultSendMessageButtonIcon extends Dom {
   constructor() {
     super("span.icon.send-message", "⬆️");
   }
 }
 
-class DefaultLogoutIcon extends DomNode {
+class DefaultLogoutIcon extends Dom {
   constructor() {
     super("span.icon.logout", "🚪");
   }
@@ -37,11 +37,10 @@ class DefaultLogoutIcon extends DomNode {
 
 class SocialCompConfig {
   public Avatar: typeof DefaultAvatar = DefaultAvatar;
-  public LogoutIcon: DomNodeConstructor = DefaultLogoutIcon;
-  public EditMenuIcon: DomNodeConstructor = DefaultEditMenuIcon;
-  public DeleteMenuIcon: DomNodeConstructor = DefaultDeleteMenuIcon;
-  public SendMessageButtonIcon: DomNodeConstructor =
-    DefaultSendMessageButtonIcon;
+  public LogoutIcon: DomConstructor = DefaultLogoutIcon;
+  public EditMenuIcon: DomConstructor = DefaultEditMenuIcon;
+  public DeleteMenuIcon: DomConstructor = DefaultDeleteMenuIcon;
+  public SendMessageButtonIcon: DomConstructor = DefaultSendMessageButtonIcon;
 
   public login = (): Promise<void> => {
     throw new Error("Not implemented");

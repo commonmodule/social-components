@@ -1,6 +1,6 @@
-import { DomNode } from "@commonmodule/app";
+import { Dom } from "@commonmodule/app";
 
-export default class PostCommentForm extends DomNode {
+export default class PostCommentForm extends Dom {
   constructor() {
     super(".post-comment-form");
   }

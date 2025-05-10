@@ -1,4 +1,4 @@
-import { DomNode, el } from "@commonmodule/app";
+import { Dom, el } from "@commonmodule/app";
 import {
   AppCompConfig,
   Button,
@@ -10,7 +10,7 @@ import UserManager from "../user/UserManager.js";
 import LoggedInUserAvatarMenu from "./LoggedInUserAvatarMenu.js";
 import LoginManager from "./LoginManager.js";
 
-export default class LoggedInUserAvatarButton extends DomNode {
+export default class LoggedInUserAvatarButton extends Dom {
   constructor(
     private loginManager: LoginManager,
     private showName: boolean = false,

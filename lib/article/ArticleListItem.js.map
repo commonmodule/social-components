@@ -1,1 +1,1 @@
-{"version":3,"file":"ArticleListItem.js","sourceRoot":"","sources":["../../src/article/ArticleListItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,OAAO;IAClD;QACE,KAAK,CAAC,oBAAoB,CAAC,CAAC;IAC9B,CAAC;CACF"}
+{"version":3,"file":"ArticleListItem.js","sourceRoot":"","sources":["../../src/article/ArticleListItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AAExC,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,GAAG;IAC9C;QACE,KAAK,CAAC,oBAAoB,CAAC,CAAC;IAC9B,CAAC;CACF"}

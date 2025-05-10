@@ -1,6 +1,6 @@
-import { DomNode } from "@commonmodule/app";
+import { Dom } from "@commonmodule/app";
 
-export default class ArticleListItem extends DomNode {
+export default class ArticleListItem extends Dom {
   constructor() {
     super(".article-list-item");
   }

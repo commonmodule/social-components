@@ -2,12 +2,12 @@
   "name": "@commonmodule/social-components",
   "author": "yj.gaia",
   "homepage": "https://personas.gaia.cc/yj.gaia",
-  "version": "0.1.7",
+  "version": "0.3.6",
   "type": "module",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.js",
   "dependencies": {
-    "@commonmodule/markdown-editor": "^0.0.4"
+    "@commonmodule/markdown-editor": "^0.0.5"
   },
   "devDependencies": {}
 }
