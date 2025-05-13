@@ -58,9 +58,7 @@ class SocialCompConfig {
     throw new Error("Not implemented");
   };
 
-  public goLoggedInUserProfile = (user: User): void => {
-    throw new Error("Not implemented");
-  };
+  public goLoggedInUserProfile = (user: User): void => {};
 
   public getLoggedInUserMenu = (
     menu: LoggedInUserAvatarMenu,
