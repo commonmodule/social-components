@@ -5,7 +5,6 @@ import {
   ButtonType,
 } from "@commonmodule/app-components";
 import SocialCompConfig from "../SocialCompConfig.js";
-import User from "../user/User.js";
 import UserManager from "../user/UserManager.js";
 import LoggedInUserAvatarMenu from "./LoggedInUserAvatarMenu.js";
 import LoginManager from "./LoginManager.js";
@@ -18,20 +17,16 @@ export default class LoggedInUserAvatarButton extends Dom {
     super(".logged-in-user-avatar-button");
 
     this.render();
-
-    loginManager.on("loginStatusChanged", this.loginStatusChangedListener);
-    UserManager.on("userUpdated", this.userUpdatedListener);
+    loginManager.bind(this, "loginStatusChanged", () => this.render());
+    UserManager.bind(this, "userUpdated", (user) => {
+      if (
+        this.loginManager.isLoggedIn() &&
+        user.id === this.loginManager.getLoggedInUser()
+      ) {
+        this.render();
+      }
+    });
   }
-
-  private loginStatusChangedListener = () => this.render();
-  private userUpdatedListener = (user: User) => {
-    if (
-      this.loginManager.isLoggedIn() &&
-      user.id === this.loginManager.getLoggedInUser()
-    ) {
-      this.render();
-    }
-  };
 
   private async render() {
     if (this.loginManager.isLoggedIn()) {
@@ -67,14 +62,5 @@ export default class LoggedInUserAvatarButton extends Dom {
         onClick: () => SocialCompConfig.login(),
       }),
     );
-  }
-
-  public remove(): void {
-    this.loginManager.off(
-      "loginStatusChanged",
-      this.loginStatusChangedListener,
-    );
-    UserManager.off("userUpdated", this.userUpdatedListener);
-    super.remove();
   }
 }
