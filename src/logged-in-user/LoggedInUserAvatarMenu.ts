@@ -50,7 +50,7 @@ export default class LoggedInUserAvatarMenu extends DropdownMenu {
         new DropdownMenuItem({
           icon: new SocialCompConfig.LogoutIcon(),
           label: "Log out",
-          onClick: () => {
+          onPress: () => {
             this.loginManager.logout();
             this.remove();
           },

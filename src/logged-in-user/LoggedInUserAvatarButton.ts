@@ -41,7 +41,7 @@ export default class LoggedInUserAvatarButton extends Dom {
           new Button(".avatar", {
             icon: new SocialCompConfig.Avatar(user),
             title: this.showName ? el("span.name", user.name) : undefined,
-            onClick: (button, event) => {
+            onPress: (button, event) => {
               event.stopPropagation();
               new LoggedInUserAvatarMenu(this.loginManager, button);
             },
@@ -59,7 +59,7 @@ export default class LoggedInUserAvatarButton extends Dom {
       new Button({
         type: ButtonType.Contained,
         title: "Log in",
-        onClick: () => SocialCompConfig.login(),
+        onPress: () => SocialCompConfig.login(),
       }),
     );
   }
