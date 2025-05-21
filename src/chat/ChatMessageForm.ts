@@ -7,9 +7,8 @@ export default class ChatMessageForm extends Dom {
   private submitButton: Button;
 
   constructor(onSend: (content: string) => void) {
-    super(".chat-message-form");
-    this.append(el(
-      "form",
+    super("form.chat-message-form");
+    this.append(
       this.input = new Input({
         //multiline: true,
         placeholder: "Type a message...",
@@ -28,7 +27,7 @@ export default class ChatMessageForm extends Dom {
           this.input.value = "";
         },
       },
-    ));
+    );
 
     this.submitButton.disable();
 
